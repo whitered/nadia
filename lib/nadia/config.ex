@@ -25,6 +25,9 @@ defmodule Nadia.Config do
           val -> val
         end
 
+      {:ok, {:process, var}} ->
+        Process.get(var)
+
       {:ok, value} ->
         value
 
